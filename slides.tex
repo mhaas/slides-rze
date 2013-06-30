@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{alltt}
 \author{Michael Haas, haas@cl.uni-heidelberg.de}
 \title{Spatial Ontologies}
 \subtitle{Seminar: Raum-, Zeit- und Ereignisrepräsentation für die semantische Verarbeitung (Dr. Michael Herweg)}
@@ -281,11 +282,16 @@ Converseness: Jill ist links von Jack. \\
 \end{frame}
 
 \begin{frame}{SUMO: Object}
-(<=> (instance ?PHYS Physical)
-(exists (?LOC ?TIME)
-(and
-(located ?PHYS ?LOC)
-(time ?PHYS ?TIME))))
+\begin{alltt}
+
+(<=> (instance ?PHYS Physical)\\
+    (exists (?LOC ?TIME)\\
+    (and\\
+    (located ?PHYS ?LOC)\\
+    (time ?PHYS ?TIME))))\\
+
+\end{alltt}
+
 %\includegraphics[scale=0.45]{img/d2_object_axiom.png}
 %\caption{SUMO Object axiom (Bateman et al, 2004)}
 %\end{figure}
@@ -296,12 +302,12 @@ Converseness: Jill ist links von Jack. \\
 
 
 \begin{frame}{SUMO: Region}
-%\begin{itemize}
+\begin{alltt}
 (=>
-(instance ?REGION Region)
-(exists (?PHYS)
-(located ?PHYS ?REGION)))
-%\end{itemize}
+    (instance ?REGION Region)\\
+    (exists (?PHYS)\\
+    (located ?PHYS ?REGION)))\\
+\end{alltt}
 \end{frame}
 
 
@@ -316,29 +322,30 @@ Converseness: Jill ist links von Jack. \\
 \end{frame}
 
 \begin{frame}{SUMO: Position}
-PositionalAttribute
-Vertical(i)
-Horizontal(i)
-Above(i)
-Below(i)
-Adjacent(i)
-Left(i)
-Right(i)
-Near(i)
-On(i)
-
-Subclass: DirectionalAttribute mit Instanzen North, South, East, West
+\begin{alltt}
+PositionalAttribute\\
+    Vertical(i)\\
+    Horizontal(i)\\
+    Above(i)\\
+    Below(i)\\
+    Adjacent(i)\\
+    Left(i)\\
+    Right(i)\\
+    Near(i)\\
+    On(i)\\
+\end{alltt}
+Subklasse: \textbf{DirectionalAttribute} mit Instanzen North, South, East, West
 \end{frame}
 
-\begin{frame}{SUMO: Position axioms}
-(<=> (orientation ?OBJ1 ?OBJ2 Vertical)
-(orientation ?OBJ2 ?OBJ1 Vertical))
-
-
+\begin{frame}{SUMO: Axiome Position}
+\begin{alltt}
 (<=>
- (orientation ?OBJ1 ?OBJ2 Right)
-(orientation ?OBJ2 ?OBJ1 Left))
-% TODO: google "SUMO frame of reference"
+    (orientation ?OBJ1 ?OBJ2 Vertical)\\
+    (orientation ?OBJ2 ?OBJ1 Vertical))\\
+(<=>\\
+    (orientation ?OBJ1 ?OBJ2 Right) \\
+    (orientation ?OBJ2 ?OBJ1 Left))
+\end{alltt}
 \end{frame}
 
 
@@ -349,7 +356,6 @@ Subclass: DirectionalAttribute mit Instanzen North, South, East, West
 \item Links immer Gegensatz von rechts?
 \item Keine Berücksichtigung unterschiedlicher Frames of Reference
 \end{itemize}
-% TODO: google "SUMO frame of reference"
 \end{frame}
 
 
@@ -363,7 +369,7 @@ The OpenCyc Platform is your gateway to the full power of Cyc, the world's large
 \end{figure}
 \end{frame}
 
-\begin{frame}{OpenCyc: Sides of objects }
+\begin{frame}{OpenCyc: Seiten von Objekten }
 \begin{figure}
 \includegraphics[scale=0.45]{img/d2_opencyc_sides_of_objects.png}
 \caption{OpenCyc Sides of objects (Bateman et al, 2004)}
@@ -371,58 +377,61 @@ The OpenCyc Platform is your gateway to the full power of Cyc, the world's large
 \end{frame}
 
 \begin{frame}{OpenCyc: Spatial Relations}
-near[NaivePhysicsVocabularyMt]:
-inFrontOf-Generally
-behind-Generally
-alignedAlong
-hasPortalToRegion
-movesWith
-stuckTo
-spatiallyIntersects
-touches
+\begin{alltt}
+near[NaivePhysicsVocabularyMt]:\\
+    inFrontOf-Generally\\
+    behind-Generally\\
+    alignedAlong\\
+    hasPortalToRegion\\
+    movesWith\\
+    stuckTo\\
+    spatiallyIntersects\\
+    touches\\
+\end{alltt}
 
 \end{frame}
 
-Does inFrontOf-Generally presuppose Side surface?
+%Does inFrontOf-Generally presuppose Side surface?
 
 
-\begin{frame}{OpenCyc: Orientation \& Direction Attributes}
+\begin{frame}{OpenCyc: Orientierung \& Richtung}
 \begin{itemize}
-\item Orientierung
-HorizontalOrientation
-VerticalOrientation
-UpsideDown
-RightSideUp
-
+\item Orientierung\\
+\begin{alltt}
+    HorizontalOrientation\\
+    VerticalOrientation\\
+    UpsideDown\\
+    RightSideUp
+\end{alltt}
 \item Richtung
-Up-Generally
-Up-Directly
-Down-Generally
-Down-Directly
-VerticalDirection
-HorizontalDirection
-
-
+\begin{alltt}
+    Up-Generally\\
+    Up-Directly\\
+    Down-Generally\\
+    Down-Directly\\
+    VerticalDirection\\
+    HorizontalDirection
+\end{alltt}
 \end{itemize}
 \end{frame}
 
 
 
 \begin{frame}{OpenCyc: Geographische Richtung}
-North-Generally
-North-Directly
-South-Directly
-...
-East-Directly
-%\begin{itemize}
-%\end{itemize}
+\begin{alltt}
+    North-Generally\\
+    North-Directly\\
+    South-Directly\\
+    ...\\
+    East-Directly
+\end{alltt}
 \end{frame}
 
 
 \begin{frame}{OpenCyc: Issues}
 \begin{itemize}
 \item Keine Beachtung von Frames of Reference
-\item Reflektiert teils Besonderheiten des Englischen
+\item Reflektiert teils Besonderheiten des Englischen\\
 $\to$ \textit{in-Floating} - Bewegung oder Attribut?
 \end{itemize}
 \end{frame}
@@ -431,7 +440,8 @@ $\to$ \textit{in-Floating} - Bewegung oder Attribut?
 
 \begin{frame}{GUM: Generalized Upper Model}
 \begin{itemize}
-\item Räumliche Erweiterung: basiert rein auf linguistischer Evidenz
+\item Räumliche Erweiterung von GUM: basiert rein auf linguistischer Evidenz
+\item Keine Festlegung auf Raumstruktur oder Interpretation
 \end{itemize}
 \end{frame}
 
@@ -458,12 +468,14 @@ To the left of the computer is a USB drive.
 
 \begin{frame}{GUM: Bewegung, Orientierung ohne Zustandsänderung}
 $$ NonAffectingOrienting  $$
-$$ NonAffectingMotion \equiv NonAffectingDirectedMotion \sqcup NonAffectingOrientationChange \sqcup NonAffectingSimpleMotion$$
+$$ NonAffectingMotion \equiv NonAffectingDirectedMotion$$ 
+$$\sqcup NonAffectingOrientationChange $$
+$$\sqcup NonAffectingSimpleMotion$$
 \begin{itemize}
-\item $NonAffectingOrienting$: "We are facing the table"
-\item $NonAffectingSimpleMotion$:  "I ran", "The ball rolls"
-\item $NonAffectingDirectedMotion$: "He walks forward"
-\item $NonAffectingOrientationChange$: "He turned around"
+\item \textbf{NonAffectingOrienting}: "We are facing the table"
+\item \textbf{NonAffectingSimpleMotion}:  "I ran", "The ball rolls"
+\item \textbf{NonAffectingDirectedMotion}: "He walks forward"
+\item \textbf{NonAffectingOrientationChange}: "He turned around"
 \end{itemize}
 \end{frame}
 
@@ -473,13 +485,13 @@ Dynamische Prozesse: "He puts the USB drive on the table"
 $$AffectingAction \equiv DoingAndHappening \sqcap \exists actee.SimpleThing$$
 $$AffectingSpatialAction$$
 \begin{figure}
-\includegraphics[scale=0.45]{img/2010_puts_usb_on_table.png}
+\includegraphics[scale=0.7]{img/2010_puts_usb_on_table.png}
 \caption{GUM Representation(Bateman et al, 2010)}
 \end{figure}
 \end{frame}
 
 \begin{frame}{GUM: Spatial Modalities}
-$$  SpatialModality \equiv SpatialDistanceModality \sqcup FunctionalSpatialModality \sqcup RelativeSpatialModality $$
+$  SpatialModality \equiv SpatialDistanceModality \sqcup FunctionalSpatialModality \sqcup RelativeSpatialModality $
 \begin{itemize}
 \item \textbf{SpatialModality} füllt \textbf{hasSpatialModality} Relation in \textbf{GeneralizedLocations}
 \begin{itemize}
@@ -489,9 +501,14 @@ $$  SpatialModality \equiv SpatialDistanceModality \sqcup FunctionalSpatialModal
 \item Beispiele: Support, Proximal, Left-Of
 \item Extrema: \textbf{extremePositionOnAxis}, \textbf{extremeDistancePosition} \\
 $\to$ "the leftmost", "the closest"
+\end{itemize}
+\end{frame}
+
+\begin{frame}{GUM: Spatial Modalities}
+\begin{itemize}
 \item Winkel und Distanzen: \textbf{quantitativeAngleExtent}, \textbf{quantitativeDistanceExtent} \\
 $\to$ "They turn around 180 degrees"
-\item Auch qualitativ: \textbf{qualitativeAngleExtent}, \textbf{qualitativeDistanceExtent} \\
+\item Qualitativ: \textbf{qualitativeAngleExtent}, \textbf{qualitativeDistanceExtent} \\
 $\to$ "Turn a bit further to your right"
 \end{itemize}
 \end{frame}
@@ -500,6 +517,13 @@ $\to$ "Turn a bit further to your right"
 \begin{frame}{GUM: Relative Aspekte \& Projektionen}
 \begin{itemize}
 \item Subklasse \textbf{RelativeSpatialModality}
+\item \textbf{HorizontalProjection}, \textbf{VerticalProjection} mit Subklassen \\
+\item \textit{In the front of the car} \\
+$\to$ \textbf{FrontProjection} unterstützt externe und interne Lesart durch Subsumption
+\begin{itemize}
+    \item Extern: \textbf{Disjointness} und \textbf{Proximal}
+    \item Intern: \textbf{Parthood}
+\end{itemize}
 \end{itemize}
 \end{frame}
 
@@ -507,12 +531,26 @@ $\to$ "Turn a bit further to your right"
 
 \begin{frame}{GUM: Frames of Reference}
 \begin{itemize}
-\item Frames of Reference realisiert über \textbf{SpatialModality}
-\item Konkreter Frame of Reference wird über Kontextualisierung eingefügt \\
-$\to$ Ontologische Repräsentation hat noch keinen konkreten FoR
+\item Frames of Reference realisiert über \textbf{RelativeSpatialModality}
+\item Repräsentation verschiedener Lesarten unterstützt \\
+$\to$ Entscheidung fällt außerhalb Ontologie über Kontextualisierung
+% TODO: ist das so? Oder ist es so zu verstehen, dass Half-Planes bevorzugte Theorie sind?
+\item Theorie hinter \textbf{LeftProjection}, \textbf{RightProjection}: Vektoren oder Ebenen? \\
+$\to$ Modular, nicht festgelegt \\
+$\to$ Inferenz-Regeln nicht festgelegt
 \end{itemize}
 \end{frame}
 
+\begin{frame}{GUM: Zusammenfassung}
+\begin{itemize}
+\item Ontologie: formalisierte Grundlage für Wissensdarstellung und -weitergabe
+\item Strikt auf Basis linguistischer Daten erstellt
+\item Bildet räumliche Phänomene ab
+\item Keine Entscheidung für zugrundeliegende Repräsentation
+\item Frames of Reference berücksichtigt
+\item Kontext benötigt für Frames of Reference
+\end{itemize}
+\end{frame}
 
 
 
