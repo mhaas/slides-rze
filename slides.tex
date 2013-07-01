@@ -16,7 +16,6 @@
 
 \begin{document}
 
-
 \begin{frame}
 \maketitle
 \end{frame}
@@ -39,10 +38,14 @@
 
 
 \begin{frame}{Motivationsfragen Ontologie}
- - How do we share knowledge? etc TODO
+\begin{itemize}
+\item Wie repräsentieren wir Weltwissen im Computer?
+\item Wie tauschen wir Wissen zwischen Systemen aus?
+\item Welche Konzept benutzt unser System?
+\item Welche Beziehungen gelten zwischen Konzepten?
+\item Welche Schlussfolgerungen aufgrund von Daten?
+\end{itemize}
 \end{frame}
-
-
 
 
 
@@ -54,20 +57,28 @@ Gruber, 1993
 \end{frame}
 
 \begin{frame}{Definition Ontology}
-Auf Deutsch: TODO
+\begin{itemize}
+\item Konzeptualisierung: Menge formal repräsentierten Wissens \\
+$\to$ Objekte, Konzepte
+\item Konzeptualisierung: abstrakte, vereinfachte Sicht auf die Welt
+\item Ontologie: formalisiert diese Konzeptualisierung
+\item Ontologie: Diskursuniversum
+\item Objekte, Konzepte, Klassen, Relationen
+\item Axiome: schränken Nutzung und Interpretation ein
+\end{itemize}
 \end{frame}
 
 
-%Constructing a view of spatial semantics as an additional layer of ontology in this way brings several advantages crucial
-%for adequately capturing the relationship between language use and spatial interpretation. First, it supports the application
-%of the full range of methods developed within ontological engineering and applied ontology in order to organize the in-
-%formation necessary in ways that conform to a strict and formally specified modeling style [65,67,148]. Second, it provides
-%a suitable level of abstraction for dealing effectively with spatial language and for describing what linguistic expressions
-%themselves bring to the interpretation process—something that has not been found possible when focusing on linguistic ele-
-%ments as isolated terms. And third, it allows the relationship between linguistic expressions and spatial interpretation to be
-%recast as a particular case of ontological alignment, or mediation, whereby two or more distinct ontologies are brought into
-%a formal relationship [89,100,99,80,98]. Combining these considerations establishes a formally robust and well grounded
-%framework from which to consider the full flexibility required for dealing with the mapping between language and space.
+% Constructing a view of spatial semantics as an additional layer of ontology in this way brings several advantages crucial
+% for adequately capturing the relationship between language use and spatial interpretation. First, it supports the application
+% of the full range of methods developed within ontological engineering and applied ontology in order to organize the in-
+% formation necessary in ways that conform to a strict and formally specified modeling style [65,67,148]. Second, it provides
+% a suitable level of abstraction for dealing effectively with spatial language and for describing what linguistic expressions
+% themselves bring to the interpretation process—something that has not been found possible when focusing on linguistic ele-
+% ments as isolated terms. And third, it allows the relationship between linguistic expressions and spatial interpretation to be
+% recast as a particular case of ontological alignment, or mediation, whereby two or more distinct ontologies are brought into
+% a formal relationship [89,100,99,80,98]. Combining these considerations establishes a formally robust and well grounded
+% framework from which to consider the full flexibility required for dealing with the mapping between language and space.
 
 
 \begin{frame}{Spatial Ontology}
@@ -80,17 +91,18 @@ Auf Deutsch: TODO
     \item Navigation
 \end{itemize}
 \item Einsatz in NLP
+\end{itemize}
 \end{frame}
 
 
-%We propose for this a linguistically-motivated ontology, or ‘linguistic ontology’ for short, that provides a specification of an
-%encapsulated layer of ontological information motivated solely by the requirements of linguistically-expressed spatial mean-
-%ings. This provides a new layer of organization for capturing the contribution of language to spatial interpretation that is
-%free of non-linguistic, contextually-dependent additions. We thereby decompose and modularize the problem of interpreting
-%and producing spatial language by ‘stratifying’ three ways: (i) lexicogrammatically, (ii) according to a shallow semantics,
-%and (iii) by contextualized specifications—all three of which are formally distinct. The application of ontological engineering
-%methods then offers considerable benefits for teasing apart the respective contributions made by these essentially distinct
-%knowledge sources.
+% We propose for this a linguistically-motivated ontology, or ‘linguistic ontology’ for short, that provides a specification of an
+% encapsulated layer of ontological information motivated solely by the requirements of linguistically-expressed spatial mean-
+% ings. This provides a new layer of organization for capturing the contribution of language to spatial interpretation that is
+% free of non-linguistic, contextually-dependent additions. We thereby decompose and modularize the problem of interpreting
+% and producing spatial language by ‘stratifying’ three ways: (i) lexicogrammatically, (ii) according to a shallow semantics,
+% and (iii) by contextualized specifications—all three of which are formally distinct. The application of ontological engineering
+% methods then offers considerable benefits for teasing apart the respective contributions made by these essentially distinct
+% knowledge sources.
 
 
 % FOR: Bewegung
@@ -106,7 +118,6 @@ Ein Boot ist in einem Fluss verankert. Bewegt sich das Boot?
 
 % FOR: intrinsische VS extrinsische orientierung
 \begin{frame}{Frames of Reference}
-
 \begin{figure}
 \includegraphics[scale=0.45]{img/levinson_fig_2-1.png}
 \caption{Wo ist der Ball? (Figure 2.1, Levinson 2003)}
@@ -128,7 +139,7 @@ $\to$ \textit{Is the hot water in the tap that would lie in the uphill southerly
 
 \begin{frame}{Intrinsic Frame of Reference}
 \begin{figure}
-\includegraphics[scale=0.45]{img/levinson_FOR_intrinsic.png}
+\includegraphics[scale=0.7]{img/levinson_FOR_intrinsic.png}
 \caption{Intrinsic FoR (Levinson 2003)}
 \end{figure}
 \end{frame}
@@ -149,7 +160,7 @@ $\to$ \textit{In front of the church lie the mountains\ldots}
 
 \begin{frame}{Relative Frame of Reference}
 \begin{figure}
-\includegraphics[scale=0.45]{img/levinson_FOR_relative.png}
+\includegraphics[scale=0.7]{img/levinson_FOR_relative.png}
 \caption{Relative FoR (Levinson 2003)}
 \end{figure}
 \end{frame}
@@ -164,6 +175,11 @@ $\to$ \textit{Bill kicked the ball to the left of the goal.}
 % ?? \item Nicht alle Sprachen habe relative FoR ausserhalb intrinsischem Bezug!
 \item Ambiguität zwischen intrinsischem und relativem FoR durch überlappende Begriffe \\
 $\to$ \textit{to the left of the chair} VS \textit{at the chair's left}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Relative Frame of Reference}
+\begin{itemize}
 \item Manche Sprachen benutzen "links" etc nur intrinsisch
 \item Relative FoR: verzichtbar
 \item Kinder lernen projektives "links" erst spät
@@ -172,9 +188,10 @@ $\to$ \textit{to the left of the chair} VS \textit{at the chair's left}
 \end{frame}
 
 
+
 \begin{frame}{Absolute Frame of Reference}
 \begin{figure}
-\includegraphics[scale=0.45]{img/levinson_FOR_absolute.png}
+\includegraphics[scale=0.7]{img/levinson_FOR_absolute.png}
 \caption{Absolute FoR (Levinson 2003)}
 \end{figure}
 \end{frame}
@@ -217,7 +234,7 @@ $\to$ Darmstadt liegt nördlich von Heidelberg.
 \item Weinheim liegt nördlich von Heidelberg. \\
 $\to$ Heidelberg liegt südlich von Weinheim.
 \item Jill ist links von Jack. Bill ist links von Jill. \\
-$\to$ ?? Bill ist links von Jack ??
+$\to$ \textbf{?} Bill ist links von Jack \textbf{?}
 \end{itemize}
 \end{frame}
 
@@ -294,18 +311,16 @@ Converseness: Jill ist links von Jack. \\
 
 
 
-\begin{frame}{SUMO: Region Taxonomy}
-%\begin{itemize}
-\begin{figure}
-\includegraphics[scale=0.45]{img/d2_region_taxonomy.png}
-\caption{SUMO Object axiom (Bateman et al, 2004)}
-\end{figure}
-%\end{itemize}
-\end{frame}
+%\begin{frame}{SUMO: Region Taxonomy}
+%\begin{figure}
+%\includegraphics[scale=0.45]{img/d2_region_taxonomy.png}
+%\caption{SUMO Object axiom (Bateman et al, 2004)}
+%\end{figure}
+%\end{frame}
 
 \begin{frame}{SUMO: Position}
 \begin{alltt}
-PositionalAttribute\\
+PositionalAttribute:\\
     Vertical(i)\\
     Horizontal(i)\\
     Above(i)\\
@@ -321,7 +336,7 @@ Subklasse: \textbf{DirectionalAttribute} mit Instanzen North, South, East, West
 
 \begin{frame}{SUMO: Axiome Position}
 \begin{alltt}
-(<=>
+(<=>\\
     (orientation ?OBJ1 ?OBJ2 Vertical)\\
     (orientation ?OBJ2 ?OBJ1 Vertical))\\
 (<=>\\
@@ -334,8 +349,8 @@ Subklasse: \textbf{DirectionalAttribute} mit Instanzen North, South, East, West
 
 \begin{frame}{SUMO: Frames of Reference}
 \begin{itemize}
-\item Positions-Axiome aus wissenschaftlicher Sicht sinnvoll
-\item Links immer Gegensatz von rechts?
+\item Positions-Axiome aus (natur-)wissenschaftlicher Sicht sinnvoll
+\item Links immer Gegenteil von rechts?
 \item Keine Berücksichtigung unterschiedlicher Frames of Reference
 \end{itemize}
 \end{frame}
@@ -376,7 +391,7 @@ near[NaivePhysicsVocabularyMt]:\\
 %Does inFrontOf-Generally presuppose Side surface?
 
 
-\begin{frame}{OpenCyc: Orientierung \& Richtung}
+\begin{frame}{OpenCyc: Orientierung}
 \begin{itemize}
 \item Orientierung\\
 \begin{alltt}
@@ -385,6 +400,11 @@ near[NaivePhysicsVocabularyMt]:\\
     UpsideDown\\
     RightSideUp
 \end{alltt}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{OpenCyc: Richtung}
+\begin{itemize}
 \item Richtung
 \begin{alltt}
     Up-Generally\\
@@ -395,7 +415,11 @@ near[NaivePhysicsVocabularyMt]:\\
     HorizontalDirection
 \end{alltt}
 \end{itemize}
+\textit{Up-Generally [\ldots ]comprises the cone-shaped set of vectors pointing
+(from some reference point) within approximately forty-five degrees of
+Up-Directly.}
 \end{frame}
+
 
 
 
@@ -404,7 +428,7 @@ near[NaivePhysicsVocabularyMt]:\\
     North-Generally\\
     North-Directly\\
     South-Directly\\
-    ...\\
+    \ldots\\
     East-Directly
 \end{alltt}
 \end{frame}
@@ -440,7 +464,6 @@ $\to$ \textit{in-Floating} - Bewegung oder Attribut?
 
 \begin{frame}{GUM: Beispiel}
 To the left of the computer is a USB drive.
-
 \begin{figure}
 \includegraphics[scale=0.45]{img/2010_fig3.png}
 \caption{GUM Representation(Bateman et al, 2010)}
@@ -450,9 +473,8 @@ To the left of the computer is a USB drive.
 
 \begin{frame}{GUM: Beispiel}
 To the left of the computer is a USB drive.
-
 \begin{figure}
-\includegraphics[scale=0.45]{img/2010_gl_of_usb.png}
+\includegraphics[scale=0.6]{img/2010_gl_of_usb.png}
 \caption{GUM Representation(Bateman et al, 2010)}
 \end{figure}
 \end{frame}
@@ -460,9 +482,9 @@ To the left of the computer is a USB drive.
 
 \begin{frame}{GUM: Bewegung, Orientierung ohne Zustandsänderung}
 $$ NonAffectingOrienting  $$
-$$ NonAffectingMotion \equiv NonAffectingDirectedMotion$$ 
-$$\sqcup NonAffectingOrientationChange $$
-$$\sqcup NonAffectingSimpleMotion$$
+$ NonAffectingMotion \equiv NonAffectingDirectedMotion
+\sqcup NonAffectingOrientationChange 
+\sqcup NonAffectingSimpleMotion$
 \begin{itemize}
 \item \textbf{NonAffectingOrienting}: "We are facing the table"
 \item \textbf{NonAffectingSimpleMotion}:  "I ran", "The ball rolls"
@@ -474,7 +496,7 @@ $$\sqcup NonAffectingSimpleMotion$$
 
 \begin{frame}{GUM: Bewegung mit Zustandsänderung}
 Dynamische Prozesse: "He puts the USB drive on the table"
-$$AffectingAction \equiv DoingAndHappening \sqcap \exists actee.SimpleThing$$
+$AffectingAction \equiv DoingAndHappening \sqcap \exists actee.SimpleThing$
 $$AffectingSpatialAction$$
 \begin{figure}
 \includegraphics[scale=0.7]{img/2010_puts_usb_on_table.png}
@@ -485,7 +507,7 @@ $$AffectingSpatialAction$$
 \begin{frame}{GUM: Spatial Modalities}
 $  SpatialModality \equiv SpatialDistanceModality \sqcup FunctionalSpatialModality \sqcup RelativeSpatialModality $
 \begin{itemize}
-\item \textbf{SpatialModality} füllt \textbf{hasSpatialModality} Relation in \textbf{GeneralizedLocations}
+\item \textbf{SpatialModality} füllt \textbf{hasSpatialModality} Relation in \textbf{GeneralizedLocation}
 \begin{itemize}
     \item Statisch: zwischen \textbf{locatum} und \textbf{relatum}
     \item Dynamisch: zwischen \textbf{actor/actee} und \textbf{relatum}
@@ -505,11 +527,19 @@ $\to$ "Turn a bit further to your right"
 \end{itemize}
 \end{frame}
 
+\begin{frame}[plain]{GUM: Spatial Concepts}
+\begin{figure}
+\includegraphics[scale=0.4]{img/2010_fig5.png}
+\caption{GUM Spatial Concepts (Bateman et al, 2010)}
+\end{figure}
+\end{frame}
+
+
 
 \begin{frame}{GUM: Relative Aspekte \& Projektionen}
 \begin{itemize}
 \item Subklasse \textbf{RelativeSpatialModality}
-\item \textbf{HorizontalProjection}, \textbf{VerticalProjection} mit Subklassen \\
+\item \textbf{HorizontalProjection}, \textbf{VerticalProjection} mit Subklassen
 \item \textit{In the front of the car} \\
 $\to$ \textbf{FrontProjection} unterstützt externe und interne Lesart durch Subsumption
 \begin{itemize}
@@ -547,22 +577,13 @@ $\to$ Inferenz-Regeln nicht festgelegt
 
 
 
-%particularly, cognitive modelling, artificial intelligence, geographic information systems (GIS),
-%and the like. The role of an ontology in this area is as it is in all domains and as was introduced
-%in our baseline ontology deliverable D1: that is, (i) to set out a consistent and well-specified
-%general modelling scheme which is free of contradiction and from which follows a set of generic
-%properties that necessarily hold over the entities covered and, (ii) to support problem solving
-%and inference within the domain of concern.
+% particularly, cognitive modelling, artificial intelligence, geographic information systems (GIS),
+% and the like. The role of an ontology in this area is as it is in all domains and as was introduced
+% in our baseline ontology deliverable D1: that is, (i) to set out a consistent and well-specified
+% general modelling scheme which is free of contradiction and from which follows a set of generic
+% properties that necessarily hold over the entities covered and, (ii) to support problem solving
+% and inference within the domain of concern.
 
-
-
-%\begin{frame}{CMSM for Sentiment Analysis: Eval Results}
-%\begin{figure}
-%\includegraphics[scale=0.45]{cmsm_for_se_table3.png}
-%\caption{Yessenalina \&  Cardie (2011)}
-%\end{figure}
-
-%\end{frame}
 
 
 \begin{frame}[allowframebreaks]{References}
@@ -574,5 +595,6 @@ $\to$ Inferenz-Regeln nicht festgelegt
 \bibitem{levinson2003} Levinson, S. C. (2003). Space in language and cognition: Explorations in cognitive diversity (Vol. 5). Cambridge University Press.
 \end{thebibliography}
 \end{frame}
+
 \end{document}
 
